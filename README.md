@@ -15,31 +15,78 @@ This is a project for GVSU's Information Security Principles course (CIS 615). S
 
 ## Contents <!-- omit in toc -->
 
-- [Incident Response Procedures](#incident-response-procedures)
-  - [General Procedures](#general-procedures)
-  - [Incident Specific Procedures](#incident-specific-procedures)
-    - [Incident A: Foo](#incident-a-foo)
-    - [Incident B: Bar](#incident-b-bar)
-- [Scenario Discussions](#scenario-discussions)
-  - [Scenario A: Foo](#scenario-a-foo)
-  - [Scenario B: Bar](#scenario-b-bar)
+- [1. Introduction](#1-introduction)
+  - [1.1 Scope](#11-scope)
+  - [1.2 Context](#12-context)
+- [2. Incident Response Procedures](#2-incident-response-procedures)
+  - [2.1 General Procedures](#21-general-procedures)
+  - [2.2 Incident Specific Procedures](#22-incident-specific-procedures)
+    - [2.2.1 Incident A: Foo](#221-incident-a-foo)
+    - [2.2.2 Incident B: Bar](#222-incident-b-bar)
+- [3. Scenario Discussions](#3-scenario-discussions)
+  - [3.1 Scenario A: Foo](#31-scenario-a-foo)
+  - [3.2 Scenario B: Bar](#32-scenario-b-bar)
 - [License](#license)
 
-# Incident Response Procedures
+# 1. Introduction
 
-## General Procedures
+## 1.1 Scope
 
-## Incident Specific Procedures
+This is a partial incident response plan. NIST provides a comprehensive approach in [SP
+800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) consisting of
+four stages:
 
-### Incident A: Foo
+1. Preparation
+2. Detection & Analysis
+3. Containment, Eradication, & Recovery
+4. Post-incident Activity
 
-### Incident B: Bar
+This project is primarily focused on the "Containment, Eradication, & Recovery" stage as shown in
+figure 1. This project contains general procedures and incident specific procedures for two incident
+types. Lastly, it discusses two scenarios posed in NIST SP 800-61 Appendix A (p. 52).
 
-# Scenario Discussions
+![Incident Response Lifecycle](images/Incident_Response_Lifecycle--Recovery.png)
 
-## Scenario A: Foo
+*Figure 1: Incident Response Lifecycle ([NIST SP
+800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) p. 35)*
 
-## Scenario B: Bar
+## 1.2 Context
+
+Procedures in the "Containment, Eradication, & Recovery" stage depend on procedures specified for
+each other stage. To place these procedures in context, assume the following for each other stage:
+
+1. Preparation
+   - Internal and external contact information is gathered
+   - A centralized logging service is established
+   - Backups for critical systems are updated monthly and stored for one year
+   - An issue tracking system is established
+   - Dedicated forensics workstations are prepared
+   - Bootable images and clean application installation files are available on removable media
+2. Detection & Analysis
+   - The organization has some capacity to monitor logs and detect precursors and indicators
+   - Incidents are documented immediately (more below)
+   - Incidents are triaged according to functional impact, integrity impact, and recoverability
+        (more below)
+3. Containment, Eradication, & Recovery
+   - Covered in this document
+4. Post-incident Activity
+   - asdf
+
+# 2. Incident Response Procedures
+
+## 2.1 General Procedures
+
+## 2.2 Incident Specific Procedures
+
+### 2.2.1 Incident A: Foo
+
+### 2.2.2 Incident B: Bar
+
+# 3. Scenario Discussions
+
+## 3.1 Scenario A: Foo
+
+## 3.2 Scenario B: Bar
 
 # License
 
