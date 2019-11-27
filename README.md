@@ -4,7 +4,7 @@
 ## Overview <!-- omit in toc -->
 
 This project is a partial incident response procedure for a 100-1000 person company with a small
-internal security team with the following prioritized basic goals:
+internal security team with the following prioritized goals:
 
 1. Prevent events from repeating
 2. Recovery should be fast
@@ -16,11 +16,26 @@ This is a project for GVSU's Information Security Principles course (CIS 615). S
 ## Contents <!-- omit in toc -->
 
 - [Incident Response Procedures](#incident-response-procedures)
+  - [General Procedures](#general-procedures)
+  - [Incident Specific Procedures](#incident-specific-procedures)
+    - [Incident A: Foo](#incident-a-foo)
+    - [Incident B: Bar](#incident-b-bar)
+- [Scenario Discussions](#scenario-discussions)
   - [Scenario A: Foo](#scenario-a-foo)
   - [Scenario B: Bar](#scenario-b-bar)
 - [License](#license)
 
 # Incident Response Procedures
+
+## General Procedures
+
+## Incident Specific Procedures
+
+### Incident A: Foo
+
+### Incident B: Bar
+
+# Scenario Discussions
 
 ## Scenario A: Foo
 
