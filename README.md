@@ -4,11 +4,11 @@
 ## Overview <!-- omit in toc -->
 
 This project is a partial incident response procedure for a 100-1000 person company with a small
-internal security team with the following prioritized goals:
+internal security team having the following prioritized goals:
 
 1. Prevent events from repeating
-2. Recovery should be fast
-3. Enable data collection to pursue legal action
+2. Support quick recovery
+3. Enable pursuit of legal action
 
 This is a project for GVSU's Information Security Principles course (CIS 615). See the
 [assignment](Assignment.md) for more details.
@@ -59,11 +59,11 @@ incident type, and is covered under incident specific procedures.
 ## 1.2 Context
 
 This incident response procedure is written in the context of a 100-1000 person company with a small
-internal security team with the following prioritized goals:
+internal security team having the following prioritized goals:
 
 1. Prevent events from repeating
-2. Recovery should be fast
-3. Enable data collection to pursue legal action
+2. Support quick recovery
+3. Enable pursuit of legal action
 
 This company prefers to deal with incidents internally. It is willing to invest in extra hardware in
 order to expedite recovery.
