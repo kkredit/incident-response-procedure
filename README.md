@@ -70,33 +70,53 @@ order to expedite recovery.
 
 # 2. Incident Response Procedures
 
-<!--
-1. Preparation
-   - Internal and external contact information is gathered
-   - A centralized logging service is established
-   - Backups for critical systems are updated monthly and stored for one year
-   - An issue tracking system is established
-   - Dedicated forensics workstations are prepared
-   - Bootable images and clean application installation files are available on removable media
-2. Detection & Analysis
-   - The organization has some capacity to monitor logs and detect precursors and indicators
-   - Incidents are documented immediately
-   - Incidents are triaged according to functional impact, integrity impact, and recoverability
-3. Containment, Eradication, & Recovery
-   - TBD
-4. Post-incident Activity
-   - TBD
--->
-
 ## 2.1 General Procedures
+
+The following procedures apply to all incident types.
 
 ### 2.1.1 Preparation
 
+#### 2.1.1.1 Backup Critical Systems
+
+#### 2.1.1.2 Stay Up to Date with Patches
+
+#### 2.1.1.3 Maintain an Issue Tracking System
+
+#### 2.1.1.4 Store Known Good Images
+
+#### 2.1.1.5 Install Basic Host and Network Security Tools
+
+#### 2.1.1.6 Establish Centralized Logging
+
+#### 2.1.1.7 Gather Contact Information
+
+#### 2.1.1.8 Prepare Dedicated Forensics Workstations
+
 ### 2.1.2 Detection & Analysis
+
+#### 2.1.2.1 Monitor Logs for Precursors and Indicators
+
+#### 2.1.2.2 Document Incidents Immediately
+
+#### 2.1.2.3 Triage Incidents for Prioritized Response
 
 ### 2.1.3 Containment, Eradication, & Recovery
 
+#### 2.1.3.1 Document All Response Steps
+
+#### 2.1.3.2 Understand the Issue
+
+#### 2.1.3.3 Respond
+
 ### 2.1.4 Post-incident Activity
+
+#### 2.1.4.1 Inform Stakeholders
+
+#### 2.1.4.2 Retain Incident Data
+
+#### 2.1.4.3 Involve Law Enforcement if Appropriate
+
+#### 2.1.4.4 Record Lessons Learned
 
 ## 2.2 Incident Specific Procedures
 
