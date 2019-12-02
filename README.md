@@ -181,7 +181,8 @@ Establish rules to prioritize responses. Heuristics may include:
 #### 2.1.3.1 Document All Response Steps
 
 As in 2.1.2.2, continue to document all observations, notes, and actions taken during containment,
-eradication, and recovery.
+eradication, and recovery. Use the dedicated forensics workstations from 2.1.1.9 for applicable
+activities.
 
 #### 2.1.3.2 Understand the Issue
 
@@ -190,7 +191,14 @@ rapidly spreading worm). Some issues require care before an eradication can be s
 APT that is well-established in the network). Make sure that containment steps will not exacerbate
 the problem.
 
-#### 2.1.3.3 Respond
+#### 2.1.3.3 Deploy Backup Hardware
+
+If the incident is causing system unavailability, while the incident is still under investigation
+but after it has been deemed safe to do so, deploy the backup hardware from 2.1.1.5 to replace the
+affected systems. Setup the backup hardware with the stored images from 2.1.1.4 and data backups
+from 2.1.1.1. This enables the fastest possible recovery from the issue.
+
+#### 2.1.3.4 Respond
 
 Perform the incident-specific procedures established in 2.2.
 
@@ -298,7 +306,7 @@ following:
     access and responsibilities.
 - Audit the account revocation process. Was I.T. technically able to disable the employee's accounts
     sufficiently quickly?
-- Consider hiring practices. Consider background checks for employees with access to sensitive data.
+- Audit hiring practices. Consider background checks for employees with access to sensitive data.
 
 # 3. Scenario Discussions
 
