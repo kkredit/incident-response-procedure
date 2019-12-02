@@ -387,6 +387,43 @@ asked to acquire evidence related to the incident and to determine what actions 
 
 ### 3.2.2 Discussion
 
+This scenario is somewhat related to the insider breach incident in 2.2.2, though the insider here
+appears innocent. The same logging and backup tools used to catch a malicious insider can be used on
+a compromised account.
+
+Payroll data is business-critical, so will be backed up under 2.1.1.1. The software used to update
+it will produce logs centralized under the system setup in 2.1.1.7. Use of backup hardware for the
+payroll system and payroll administrator enables quick recovery while detailed forensics take place
+on the attacked systems.
+
+The response procedure would be as follows:
+
+1. The responder documents the presence of the event and all proceeding steps taken.
+2. The responder determines that since there is potential financial impact on the company, action
+    must be taken.
+3. Because backup hardware and data can be used to recover immediately, those resources are
+    provisioned. Further action takes place at the reasonable convenience of the security team.
+4. The responder contacts relevant internal parties (e.g. the financial controller) and determines
+    that only one member of the security team is required for forensics.
+5. The team member uses a forensics workstation setup in 2.1.1.9 to perform all interaction with the
+    affected systems.
+6. The responder uses the application logs and backups to determine the changes made. (It is up to
+    the physical security team to identify the individual who entered the office and assumed control
+    of the workstation.)
+7. The responder ensures that all data is restored undoing the changes uncovered in step 6 (if that
+    is not already covered by deploying the backup data).
+8. Stakeholders are updated of with the investigation findings.
+9. If the perpetrator is identified, they are disciplined per 2.2.2.3, possibly including legal
+    action.
+10. All log data and recorded activities are packaged and stored.
+11. The hardware resources are either redeployed or wiped and added to the extra hardware inventory.
+12. The incident response team holds a lessons learned meeting per 2.1.4.4.
+
+This scenario benefits from the backup hardware purchased to support quick recovery while enabling
+detailed investigation. With the correct logging mechanisms in place, this is a technically simple
+incident to recover from. It may be a better test of the security and IT team's deployment and
+backup recovery processes than their forensics processes.
+
 # License
 
 This project is licensed under the Creative Commons Attribution 4.0 International license. The text
