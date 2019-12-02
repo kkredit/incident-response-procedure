@@ -198,13 +198,45 @@ Perform the incident-specific procedures established in 2.2.
 
 #### 2.1.4.1 Inform Stakeholders
 
-Contact the relevant parties through the communication channels established in 2.1.1.8.
+Contact the relevant parties through the communication channels established in 2.1.1.8. Fulfill all
+legal reporting obligations. Contact all internal parties first, elevated to the appropriate level.
+Depending on the circumstances of the incident, reach out to the ISP, software vendors, legal, and
+law enforcement agencies.
 
 #### 2.1.4.2 Retain Incident Data
 
+Collect an dedicated store of data relevant to the incident. Retain this data while any of the
+following are true:
+
+- Legal requirements demand it
+- There is an ongoing legal case
+- It is within the statue of limitations to prosecute the event
+- The data can contribute to lessons learned
+- It is less than three years old
+
 #### 2.1.4.3 Involve Law Enforcement if Appropriate
 
+As soon as the possibility of a legal case is established, contact the law enforcement agency with
+appropriate jurisdiction and provide them full access to incident data (excepting anonymization to
+protect the privacy of innocent parties). The FBI will be the most helpful, as they have cyber
+capabilities and most online security incidents cross state borders. Hand off action to the legal
+team, supporting them technically as required.
+
 #### 2.1.4.4 Record Lessons Learned
+
+After the incident has been fully resolved, hold a lessons learned meeting. Analyze each stage of
+preparation; detection and analysis; containment, eradication, and recovery; and post-incident
+activity to determine what went well and what did not. To prevent incidents from recurring,
+implement new preparation steps that will acceptably reduce the risk of the event from repeating.
+Solutions include but are not limited to:
+
+- Remediation: eliminate the risk
+- Mitigation: reduce the risk
+- Transfer: externalize the cost of the risk
+- Accept: actively decide that the risk worth taking
+- Avoid: stop engaging in the risky activity
+
+Update the incident response procedure to handle the incident better next time.
 
 ## 2.2 Incident Specific Procedures
 
@@ -212,9 +244,9 @@ The following procedures apply only to particular incidents.
 
 ### 2.2.1 Incident: Distributed Denial Of Service
 
-A distributed denial of service attack pits a large number of attacker-controlled hosts against the
-organization's internet-facing services. The malicious hosts try to consume all of the server's
-resources in order to prevent legitimate requests from being handled.
+A distributed denial of service (DDOS) attack pits a large number of attacker-controlled hosts
+against the organization's internet-facing services. The malicious hosts try to consume all of the
+server's resources in order to prevent legitimate requests from being handled.
 
 #### 2.2.1.1 Configure Web Servers to Stop Floods
 
@@ -228,6 +260,14 @@ Contact the ISP through the communication channel established in 2.1.1.8. Inform
 and coordinate to block the offending IP addresses before they reach the web server.
 
 #### 2.2.1.3 Post-incident Procedures
+
+Follow the steps in 2.1.4. Specific actions to take following a DDOS attack include the following:
+
+- If the attacking party or botnet has been taken down, unblock the offending IP addresses after
+    the attack has ended.
+- Reassess appropriate baseline bandwidth and resource allocation for internet services.
+- If critical services were interrupted for a significant time, inform customers of the incident and
+    steps taken in response.
 
 ### 2.2.2 Incident: Insider Breach
 
@@ -250,6 +290,15 @@ Using backups and logs of activity, restore any modified data to a known good st
 confidentiality cannot be truly remediated, take down exposed confidential data as possible.
 
 #### 2.2.2.3 Post-incident Procedures
+
+Follow the steps in 2.1.4. Specific actions to take following an insider breach include the
+following:
+
+- Discipline the compromised employee. If the employee is not fired, severely restrict their network
+    access and responsibilities.
+- Audit the account revocation process. Was I.T. technically able to disable the employee's accounts
+    sufficiently quickly?
+- Consider hiring practices. Consider background checks for employees with access to sensitive data.
 
 # 3. Scenario Discussions
 
