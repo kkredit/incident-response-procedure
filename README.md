@@ -78,19 +78,41 @@ The following procedures apply to all incident types.
 
 #### 2.1.1.1 Backup Critical Systems
 
+In order to support quick recovery, backup all critical systems. Critical systems include any that
+would cost more than one business day to restore from clean images or incur unacceptable data loss.
+Backup period and depth will differ for each system. Backup depth is required to recover from
+incidents lasting longer than a single backup period.
+
 #### 2.1.1.2 Stay Up to Date with Patches
+
+In order to prevent events from repeating and prevent events in the first place, stay up to date
+with patches. Internet-facing services must apply all security-related patches within 48 hours of
+release. Internal systems must apply all security-related patches within 2 weeks of release.
 
 #### 2.1.1.3 Maintain an Issue Tracking System
 
+Track and monitor all issues in a centralized system. Inputs originate from employees, I.T., and
+security team staff. The security team must reply to, update, and close all security related issues.
+
 #### 2.1.1.4 Store Known Good Images
 
-#### 2.1.1.5 Install Basic Host and Network Security Tools
+In order to support quick recovery, create backups of known good OS and application images. Store
+images on external media unplugged from any system.
 
-#### 2.1.1.6 Establish Centralized Logging
+#### 2.1.1.5 Maintain an Inventory of Replacement Hardware
 
-#### 2.1.1.7 Gather Contact Information
+In order to support quick recovery, and because the organization is willing to fund extra hardware
+to expedite recovery, maintain an inventory of server, networking, and workstation hardware in an
+amount sufficient to rebuild critical infrastructure from scratch to 20% capacity for external
+services and 10% capacity for internal services.
 
-#### 2.1.1.8 Prepare Dedicated Forensics Workstations
+#### 2.1.1.6 Install Basic Host and Network Security Tools
+
+#### 2.1.1.7 Establish Centralized Logging
+
+#### 2.1.1.8 Gather Contact Information
+
+#### 2.1.1.9 Prepare Dedicated Forensics Workstations
 
 ### 2.1.2 Detection & Analysis
 
@@ -120,11 +142,28 @@ The following procedures apply to all incident types.
 
 ## 2.2 Incident Specific Procedures
 
+The following procedures apply only to particular incidents.
+
 ### 2.2.1 Incident: Distributed Denial Of Service
+
+#### 2.2.1.1 Configure Web Servers to Stop Floods
+
+#### 2.2.1.2 Coordinate with ISP to Block IPs
+
+#### 2.2.1.3 Post-incident Procedures
 
 ### 2.2.2 Incident: Insider Breach
 
+#### 2.2.2.1 Identify and Disable Compromised Accounts
+
+#### 2.2.2.2 Restore Data to Good State
+
+#### 2.2.2.3 Post-incident Procedures
+
 # 3. Scenario Discussions
+
+The following are not procedures, but discussions based on hypothetical situations designed to
+demonstrate the above procedures in action.
 
 ## 3.1 Scenario: Domain Name System (DNS) Server Denial of Service (DoS)
 
@@ -146,7 +185,7 @@ Scenario description ([NIST SP
 800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) p. 55):
 
 > On a Wednesday evening, the organization's physical security team receives a call from a payroll
-administrator who saw an unknown person leave her office, run down the hallway,and exit the
+administrator who saw an unknown person leave her office, run down the hallway, and exit the
 building. The administrator had left her workstation unlocked and unattended for only a few minutes.
 The payroll program is still logged in and on the main menu, as it was when she left it, but the
 administrator notices that the mouse appears to have been moved. The incident response team has been
