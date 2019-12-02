@@ -29,7 +29,11 @@ This is a project for GVSU's Information Security Principles course (CIS 615). S
     - [2.2.2 Incident: Insider Breach](#222-incident-insider-breach)
 - [3. Scenario Discussions](#3-scenario-discussions)
   - [3.1 Scenario: Domain Name System (DNS) Server Denial of Service (DoS)](#31-scenario-domain-name-system-dns-server-denial-of-service-dos)
+    - [3.1.1 Description](#311-description)
+    - [3.1.2 Discussion](#312-discussion)
   - [3.2 Scenario: Unauthorized Access to Payroll Records](#32-scenario-unauthorized-access-to-payroll-records)
+    - [3.2.1 Description](#321-description)
+    - [3.2.2 Discussion](#322-discussion)
 - [License](#license)
 
 # 1. Introduction
@@ -91,7 +95,7 @@ release. Internal systems must apply all security-related patches within 2 weeks
 
 #### 2.1.1.3 Maintain an Issue Tracking System
 
-Track and monitor all issues in a centralized system. Inputs originate from employees, I.T., and
+Track and monitor all issues in a centralized system. Inputs originate from employees, IT, and
 security team staff. The security team must reply to, update, and close all security related issues.
 
 #### 2.1.1.4 Store Known Good Images
@@ -236,7 +240,7 @@ After the incident has been fully resolved, hold a lessons learned meeting. Anal
 preparation; detection and analysis; containment, eradication, and recovery; and post-incident
 activity to determine what went well and what did not. To prevent incidents from recurring,
 implement new preparation steps that will acceptably reduce the risk of the event from repeating.
-Solutions include but are not limited to:
+Long term solutions include but are not limited to:
 
 - Remediation: eliminate the risk
 - Mitigation: reduce the risk
@@ -304,7 +308,7 @@ following:
 
 - Discipline the compromised employee. If the employee is not fired, severely restrict their network
     access and responsibilities.
-- Audit the account revocation process. Was I.T. technically able to disable the employee's accounts
+- Audit the account revocation process. Was IT technically able to disable the employee's accounts
     sufficiently quickly?
 - Audit hiring practices. Consider background checks for employees with access to sensitive data.
 
@@ -314,6 +318,8 @@ The following are not procedures, but discussions based on hypothetical situatio
 demonstrate the above procedures in action.
 
 ## 3.1 Scenario: Domain Name System (DNS) Server Denial of Service (DoS)
+
+### 3.1.1 Description
 
 Scenario description ([NIST SP
 800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) p. 53):
@@ -327,7 +333,47 @@ organization's public DNS servers. Analysis of the traffic shows that the DNS se
 high volumes of requests from a single external IP address. Also, all the DNS requests from that
 address come from the same source port.
 
+### 3.1.2 Discussion
+
+This scenario is closely related to the procedure for DDOS attacks in 2.2.1. Via the tools setup in
+2.1.1.6 and monitoring mandated in 2.1.2.1, a security team employee will be notified of this
+incident in a timely manner. With the contact information available from 2.1.1.9, the responder will
+be able to quickly coordinate with other members of the team and the ISP.
+
+The response procedure would be as follows:
+
+1. The responder documents the presence of the event and all proceeding steps taken.
+2. The responder determines that since nearly all legitimate traffic is being blocked, the event is
+    severe enough to merit immediate action.
+3. Deployment of backup hardware and use of forensic equipment is not applicable in this case
+4. The responder first contacts the necessary security and IT staff needed to technically
+    remediate the issue, and second contacts executives at the appropriate level to alert them of
+    the business impact.
+5. The assembled incident response team follows the steps in 2.2.1.1 to configure the DNS server to
+    stop floods a handle more traffic. Because it is coming from a single IP address, that address
+    is blocked.
+6. The incident response team contacts the organization's ISP to block the IP address. Because the
+    bandwidth is being consumed with UDP traffic, ignoring the traffic at the server will not
+    the problem alone.
+7. With the incident technically remediated, the incident response team informs stakeholders of the
+    issue and the steps taken in response. If the addresses being resolved by the DNS server were
+    for critical services, this may include customers that were affected.
+8. All log data and recorded activities are packaged and stored.
+9. If the service outage caused considerable financial or safety loss, legal action is initiated.
+    Since the attacker used a single IP address to attack from, there is a good chance they can be
+    identified.
+10. The server is reconfigured for an appropriate bandwidth support.
+11. The incident response team holds a lessons learned meeting per 2.1.4.4.
+
+Overall, because the technical solution is relatively simple, only a few security and IT team
+members need be involved in incident response. This type of event is not particularly concerning.
+The only complicating factor is if the service is critical to financial performance, safety, or
+reputation. If that is the case, it should be able to withstand a DOS attack from a single host, and
+technical remediations to ensure this cannot happen again are required.
+
 ## 3.2 Scenario: Unauthorized Access to Payroll Records
+
+### 3.2.1 Description
 
 Scenario description ([NIST SP
 800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) p. 55):
@@ -338,6 +384,8 @@ building. The administrator had left her workstation unlocked and unattended for
 The payroll program is still logged in and on the main menu, as it was when she left it, but the
 administrator notices that the mouse appears to have been moved. The incident response team has been
 asked to acquire evidence related to the incident and to determine what actions were performed.
+
+### 3.2.2 Discussion
 
 # License
 
