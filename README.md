@@ -108,31 +108,97 @@ services and 10% capacity for internal services.
 
 #### 2.1.1.6 Install Basic Host and Network Security Tools
 
+Setup basic security tools to monitor and control host and network activity. The exact tools
+selected will vary depending on the environment; examples include antivirus software, log analyzers,
+network traffic analyzers, and honeypots. These tools support quick recovery and can be used to
+prevent future incidents of the same nature from repeating.
+
 #### 2.1.1.7 Establish Centralized Logging
+
+Use centralized logging for the tools setup in 2.1.1.6. Backup the logs as a critical data system
+per 2.1.1.1. These centralized logs will be used to establish the sequence of events during an
+incident and are required to enable pursuit of legal action. They will also be referenced during
+incident investigation and recovery.
 
 #### 2.1.1.8 Gather Contact Information
 
+Identify and gather contact information on paper for the following parties:
+
+- All security team staff
+- All C-suite executives
+- The organization's ISP
+- Critical software vendors (as applicable)
+- Affected external parties (as applicable)
+- Corporate legal counsel
+- US-CERT (if applicable)
+- Law enforcement agency contacts:
+  - Local police department
+  - State police
+  - FBI
+  - DHS (if applicable)
+
+Contact information may include phone numbers, email addresses, or public encryption keys.
+Establishing contact channels before an incident occurs is necessary to support quick recovery and
+enable pursuit of legal action.
+
 #### 2.1.1.9 Prepare Dedicated Forensics Workstations
+
+Provision workstations dedicated to forensics activities. The workstations require protections such
+that they can (a) perform otherwise dangerous operations and (b) provide detailed logs on the
+activities they perform. With an acceptable cost of extra hardware, these workstations support quick
+recovery and data collection to enable legal action.
 
 ### 2.1.2 Detection & Analysis
 
 #### 2.1.2.1 Monitor Logs for Precursors and Indicators
 
+In order to quickly detect incidents, continuously monitor activities reported by the tools setup in
+2.1.1.6 and recording to the logs in 2.1.1.7. Have a security team member monitor directly during
+normal business hours; have one employee on call at all times and tools configured to push notices
+to that employee's mobile device.
+
 #### 2.1.2.2 Document Incidents Immediately
 
+In order to establish a paper trail of observed activities and the security team's response,
+document all security events immediately. All observations, notes, and actions must be logged.
+During periods of high activity, have one team member performing actions and the other dedicated to
+logging.
+
 #### 2.1.2.3 Triage Incidents for Prioritized Response
+
+Establish rules to prioritize responses. Heuristics may include:
+
+- Ability to remediate
+- Ability to prevent from repeating
+- Time required to respond
+- Material cost required to respond
+- Reputation damage caused by the incident
+- Legal obligations
+- Ability to pursue legal action
 
 ### 2.1.3 Containment, Eradication, & Recovery
 
 #### 2.1.3.1 Document All Response Steps
 
+As in 2.1.2.2, continue to document all observations, notes, and actions taken during containment,
+eradication, and recovery.
+
 #### 2.1.3.2 Understand the Issue
 
+Understand the nature of the issue before eradication. Some issues require immediate action (e.g., a
+rapidly spreading worm). Some issues require care before an eradication can be successful (e.g., an
+APT that is well-established in the network). Make sure that containment steps will not exacerbate
+the problem.
+
 #### 2.1.3.3 Respond
+
+Perform the incident-specific procedures established in 2.2.
 
 ### 2.1.4 Post-incident Activity
 
 #### 2.1.4.1 Inform Stakeholders
+
+Contact the relevant parties through the communication channels established in 2.1.1.8.
 
 #### 2.1.4.2 Retain Incident Data
 
@@ -146,17 +212,42 @@ The following procedures apply only to particular incidents.
 
 ### 2.2.1 Incident: Distributed Denial Of Service
 
+A distributed denial of service attack pits a large number of attacker-controlled hosts against the
+organization's internet-facing services. The malicious hosts try to consume all of the server's
+resources in order to prevent legitimate requests from being handled.
+
 #### 2.2.1.1 Configure Web Servers to Stop Floods
 
+Configure the attacked servers to protect against HTTP and SYN floods. Specific procedures depend on
+the web server in use. Block the offending IP address and attempt to increase bandwidth above what
+the attacker can consume.
+
 #### 2.2.1.2 Coordinate with ISP to Block IPs
+
+Contact the ISP through the communication channel established in 2.1.1.8. Inform them of the attack
+and coordinate to block the offending IP addresses before they reach the web server.
 
 #### 2.2.1.3 Post-incident Procedures
 
 ### 2.2.2 Incident: Insider Breach
 
+An insider breach involves a member of the organization abusing their access rights to violate the
+confidentiality, integrity, or availability of a system. Usually the focus is on confidentiality of
+user data or organizational intellectual property.
+
 #### 2.2.2.1 Identify and Disable Compromised Accounts
 
+Upon discovery of an insider breach, immediately begin gathering all the accounts associated with
+that user and inspect the centralized logs to determine the activities the user has engaged in. Per
+2.1.3.2, the user's activity may cause immediate action to be dangerous. In severe cases, the
+employee may have to be physically escorted from the building before accounts are disabled in order
+to prevent unpredictable behavior. As soon as safely possible, disable all accounts associated with
+the compromised user.
+
 #### 2.2.2.2 Restore Data to Good State
+
+Using backups and logs of activity, restore any modified data to a known good state. Though
+confidentiality cannot be truly remediated, take down exposed confidential data as possible.
 
 #### 2.2.2.3 Post-incident Procedures
 
