@@ -136,7 +136,7 @@ Identify and gather contact information on paper for the following parties:
 - Corporate legal counsel
 - US-CERT (if applicable)
 - Law enforcement agency contacts:
-  - Local police department
+  - Local police
   - State police
   - FBI
   - DHS (if applicable)
@@ -148,9 +148,9 @@ enable pursuit of legal action.
 #### 2.1.1.9 Prepare Dedicated Forensics Workstations
 
 Provision workstations dedicated to forensics activities. The workstations require protections such
-that they can (a) perform otherwise dangerous operations and (b) provide detailed logs on the
-activities they perform. With an acceptable cost of extra hardware, these workstations support quick
-recovery and data collection to enable legal action.
+that they can perform otherwise dangerous operations and provide detailed logs on the activities
+they perform. With an acceptable cost of extra hardware, these workstations support quick recovery
+and data collection to enable legal action.
 
 ### 2.1.2 Detection & Analysis
 
@@ -217,7 +217,7 @@ law enforcement agencies.
 
 #### 2.1.4.2 Retain Incident Data
 
-Collect an dedicated store of data relevant to the incident. Retain this data while any of the
+Collect a dedicated store of data relevant to the incident. Retain this data while any of the
 following are true:
 
 - Legal requirements demand it
@@ -299,7 +299,7 @@ the compromised user.
 #### 2.2.2.2 Restore Data to Good State
 
 Using backups and logs of activity, restore any modified data to a known good state. Though
-confidentiality cannot be truly remediated, take down exposed confidential data as possible.
+confidentiality cannot be truly remediated, take down exposed confidential data as soon as possible.
 
 #### 2.2.2.3 Post-incident Procedures
 
@@ -345,13 +345,13 @@ The response procedure would be as follows:
 1. The responder documents the presence of the event and all proceeding steps taken.
 2. The responder determines that since nearly all legitimate traffic is being blocked, the event is
     severe enough to merit immediate action.
-3. Deployment of backup hardware and use of forensic equipment is not applicable in this case
+3. Deployment of backup hardware and use of forensic equipment is not applicable in this case.
 4. The responder first contacts the necessary security and IT staff needed to technically
     remediate the issue, and second contacts executives at the appropriate level to alert them of
     the business impact.
 5. The assembled incident response team follows the steps in 2.2.1.1 to configure the DNS server to
-    stop floods a handle more traffic. Because it is coming from a single IP address, that address
-    is blocked.
+    stop floods and handle more traffic. Because it is coming from a single IP address, that address
+    is ignored.
 6. The incident response team contacts the organization's ISP to block the IP address. Because the
     bandwidth is being consumed with UDP traffic, ignoring the traffic at the server will not
     the problem alone.
@@ -391,10 +391,10 @@ This scenario is somewhat related to the insider breach incident in 2.2.2, thoug
 appears innocent. The same logging and backup tools used to catch a malicious insider can be used on
 a compromised account.
 
-Payroll data is business-critical, so will be backed up under 2.1.1.1. The software used to update
-it will produce logs centralized under the system setup in 2.1.1.7. Use of backup hardware for the
-payroll system and payroll administrator enables quick recovery while detailed forensics take place
-on the attacked systems.
+Payroll data is business-critical, so it will be backed up under 2.1.1.1. The software used to
+update it will produce logs centralized under the system setup in 2.1.1.7. Use of backup hardware
+for the payroll system and payroll administrator enables quick recovery while detailed forensics
+take place on the attacked systems.
 
 The response procedure would be as follows:
 
@@ -410,8 +410,8 @@ The response procedure would be as follows:
 6. The responder uses the application logs and backups to determine the changes made. (It is up to
     the physical security team to identify the individual who entered the office and assumed control
     of the workstation.)
-7. The responder ensures that all data is restored undoing the changes uncovered in step 6 (if that
-    is not already covered by deploying the backup data).
+7. The responder ensures that all data is restored so as to revert the changes uncovered in step 6
+    (if that is not achieved by deploying the backup data).
 8. Stakeholders are updated of with the investigation findings.
 9. If the perpetrator is identified, they are disciplined per 2.2.2.3, possibly including legal
     action.
